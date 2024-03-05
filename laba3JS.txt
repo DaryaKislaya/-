@@ -1,0 +1,147 @@
+ЗАДАНИЕ 1
+var admin, name;
+name = "Джон";
+admin = name;
+alert(admin); 
+
+ЗАДАНИЕ 2
+
+let a = prompt("Первое число?", 1);
+let b = prompt("Второе число?", 2);
+
+// Преобразуем строки в числа и затем складываем их
+let result = Number(a) + Number(b);
+
+alert(result); // Теперь должно вывести 3
+
+ЗАДАНИЕ 3
+for (let i = 2; i <= 10; i += 2) {
+    console.log(i);
+}
+
+ЗАДАНИЕ 4
+let i = 0;
+while (i < 3) {
+    alert(`число ${i}!`);
+    i++;
+}
+
+ЗАДАНИЕ 5
+let number;
+
+do {
+    number = prompt("Введите число больше 100:", "");
+} while (number <= 100 && number !== null);
+
+ЗАДАНИЕ 6
+let n = 10;
+
+nextPrime:
+for (let i = 2; i <= n; i++) {
+  for (let j = 2; j < i; j++) {
+    if (i % j === 0) continue nextPrime;
+  }
+  console.log(i); // Выводим простое число
+}
+
+
+
+
+
+
+
+ЗАДАЧА 1
+// Задача 1: Вернуть число в обратном порядке
+function reverseNumber(number) {
+    return parseInt(number.toString().split('').reverse().join(''));
+}
+
+console.log(reverseNumber(123)); // Выведет 321
+
+// Задача 2: Вернуть число без повторяющихся цифр
+function removeDuplicateDigits(number) {
+    return parseInt([...new Set(number.toString().split(''))].join(''));
+}
+
+console.log(removeDuplicateDigits(111333456)); // Выведет 13456
+
+// Задача 3: Посчитать, сколько раз в данном числе встречается данная цифра
+function countDigitOccurrences(number, digit) {
+    return number.toString().split(digit).length - 1;
+}
+
+console.log(countDigitOccurrences(1355567, 5)); // Выведет 3
+
+// Задача 4: Посчитать самую длинную последовательность нулей/единиц в двоичной записи данного числа
+function longestConsecutiveZeroesOrOnes(number, digit) {
+    let binaryString = number.toString(2);
+    let longestSequence = 0;
+    let currentSequence = 0;
+    
+    for (let i = 0; i < binaryString.length; i++) {
+        if (binaryString[i] === digit) {
+            currentSequence++;
+            longestSequence = Math.max(longestSequence, currentSequence);
+        } else {
+            currentSequence = 0;
+        }
+    }
+    
+    return longestSequence;
+}
+
+console.log(longestConsecutiveZeroesOrOnes(1001010011001, '0')); // Выведет 3
+console.log(longestConsecutiveZeroesOrOnes(1001010011001, '1')); // Выведет 2
+
+
+
+ЗАДАЧА 2
+Найти самый первый неповторяющийся символ в строке:
+javascript
+
+Copy code
+function findFirstUniqueCharacter(str) {
+    for (let i = 0; i < str.length; i++) {
+        if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
+            return str[i];
+        }
+    }
+    return null; // Если все символы повторяются
+}
+
+console.log(findFirstUniqueCharacter('фывфавыапрс')); // Выведет 'п'
+  Сгенерировать строку заданной длины из случайных символов, взятых из набора английских букв и цифр:
+javascript
+
+Copy code
+function generateRandomString(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
+}
+
+console.log(generateRandomString(5)); // Выведет строку из 5 случайных символов
+  Вернуть только уникальные символы строки:
+javascript
+
+Copy code
+function removeDuplicateCharacters(str) {
+    return str.split('').filter((value, index, self) => self.indexOf(value) === index).join('');
+}
+
+console.log(removeDuplicateCharacters('позволяеткопироватьтекстиз')); // Выведет 'позвляеткираьс'
+
+
+
+
+
+
+
+
+
+
+
+
