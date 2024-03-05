@@ -1,0 +1,90 @@
+
+
+:root {
+    --main-bg-color: #333;
+    --main-text-color: #000;
+    --accent-color: #ccc;
+    --delete-button-color: #ff6347;
+    --font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    color: white; /* Изменяем цвет заголовка на белый */
+    font-size: 24px; /* Увеличиваем размер заголовка */
+  }
+  
+  .input-container {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  button {
+    font-size: 18px; /* Увеличиваем размер текстового поля и кнопок */
+    padding: 14px 28px; /* Увеличиваем отступы текстового поля и кнопок */
+  }
+  
+  input[type="text"] {
+    font-size: 18px;
+    padding: 14px 28px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  button.add-task-button,
+  button.delete-all-button {
+    font-size: 18px;
+    padding: 14px 28px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  button.add-task-button {
+    border-left: none;
+    border-radius: 0;
+  }
+  
+  button.delete-all-button {
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    background-color: var(--delete-button-color);
+    color: #fff;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  li:hover {
+    background-color: #e6e6e6;
+  }
+  
+  footer {
+    background-color: #ccc;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+  }

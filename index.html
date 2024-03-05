@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список задач</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Список задач</h1>
+    <div class="input-container">
+        <input type="text" id="taskInput" placeholder="Введите задачу">
+        <button class="add-task-button" onclick="addTask()">Добавить задачу</button>
+        <button class="delete-all-button" onclick="deleteAllTasks()">Удалить все задачи</button>
+    </div>
+    <ul id="taskList"></ul>
+    <footer>&copy; 2024 Ваша компания</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
